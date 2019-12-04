@@ -1,0 +1,41 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build app", // f5
+            "type": "shell",
+            "command": "cd ${fileDirname} && cd ../ && make -j8",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "flash app", // f6
+            "type": "shell",
+            "command": "cd ${fileDirname} && cd ../ && make -j8 flash monitor"
+        },
+        {
+            "label": "monitor", // f7
+            "type": "shell",
+            "command": "cd ${fileDirname} && cd ../ && make monitor"
+        },
+        {
+            "label": "clean app", // f8
+            "type": "shell",
+            "command": "cd ${fileDirname} && cd ../ && make clean",
+        },
+        {
+            "label": "erase flash", // f9
+            "type": "shell",
+            "command": "cd ${fileDirname} && cd ../ && make erase_flash",
+        },
+        {
+            "label": "menuconfig", // f10
+            "type": "shell",
+            "command": "cd ${fileDirname} && cd ../ && make menuconfig"
+        },
+    ]
+}

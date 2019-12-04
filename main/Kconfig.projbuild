@@ -1,0 +1,15 @@
+menu "vl53l1x Test Configuration"
+
+config LED_RED_IO
+    int "LED_RED GPIO NUM"
+    default 25
+    help
+	GPIO pin for LED_RED
+    
+config LED_GREEN_IO
+    int "LED_GREEN GPIO NUM"
+    default 26
+    help
+	GPIO pin for LED_GREEN
+
+endmenu
